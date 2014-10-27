@@ -8,7 +8,7 @@ default[:rest2ldap][:url] = url
 default[:rest2ldap][:ldap_host] = 'ldap.example.com'
 default[:rest2ldap][:ldap_port] = 389
 default[:rest2ldap][:ldap_binddn] = 'cn=Directory Manager'
-default[:rest2ldap][:ldap_bindpw] = 'password'
+default[:rest2ldap][:ldap_bindpw] = ''
 default[:rest2ldap][:ldap_searchbase] = 'ou=people,dc=example,dc=com'
 default[:rest2ldap][:ldap_searchscope] = 'sub' # sub OR one
 default[:rest2ldap][:ldap_searchfilter] = '(&(objectClass=person)(uid=%s))'
