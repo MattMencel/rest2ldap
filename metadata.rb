@@ -1,9 +1,11 @@
 name 'rest2ldap'
 maintainer 'Matt Mencel'
 maintainer_email 'mr-mencel@wiu.edu'
-license 'all_rights'
+license 'Apache 2.0'
 description 'Installs/Configures rest2ldap'
-long_description 'Installs/Configures rest2ldap'
-version '0.1.0'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version '0.1.1'
 
-depends 'tomcat'
+supports 'ubuntu'
+
+depends 'tomcat', '~> 0.16.2'
