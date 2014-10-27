@@ -38,7 +38,7 @@ Key | Type | Description | Default
 
 ### Important Note
 
-The mappings look relatively complicated upon first inspection.  The OPENDJ Admin
+The mappings look relatively complicated upon first inspection.  The OpenDJ Admin
 Guide has an appendix with some pretty good documentation.
 
 http://opendj.forgerock.org/opendj-server/doc/admin-guide/#appendix-rest2ldap
