@@ -1,4 +1,3 @@
 # rest2ldap
 
-TODO: Enter the cookbook description here.
-
+Sets up the OpenDJ Rest2Ldap Gateway
