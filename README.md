@@ -10,6 +10,15 @@ Installs and configures the OpenDJ Rest2Ldap Gateway in Tomcat
 This is a fairly simple cookbook so it will likely work on other Ubuntu versions
 as well as RHEL/CentOS platforms.
 
+This allows you to to have a REST interface to an LDAP Directory server.  Currently
+tested with the following.
+
+* OpenDJ
+* Sun One Directory Server
+
+Given the right configuration it should work with just about any directory server
+including Active Directory.
+
 ## Tunable Attributes
 
 All tunable attributes are in the `rest2ldap` hierarchy.
@@ -20,8 +29,8 @@ Key | Type | Description | Default
 `url` | String | Download URL | Calculated
 `ldap_host` | String | LDAP Host | 'ldap.example.com'
 `ldap_port` | Numeric | LDAP Port | 389
-`ldap_binddn` | String | Ldap Bind DN | 'cn=Directory Manager'
-`ldap_bindpw` | String | Ldap Bind Password | empty
+`ldap_binddn` | String | LDAP Bind DN | 'cn=Directory Manager'
+`ldap_bindpw` | String | LDAP Bind Password | empty
 `ldap_searchbase` | String | LDAP Search Base | 'ou=people,dc=example,dc=com'
 `ldap_searchscope` | String | LDAP Search Scope | 'sub'
 `ldap_searchfilter` | String | LDAP Search Filter | '(&(objectClass=person)(uid=%s))'
