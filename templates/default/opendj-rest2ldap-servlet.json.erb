@@ -43,8 +43,8 @@
             // The preferred load-balancing pool.
             "primaryLDAPServers"       : [
                 {
-                    "hostname" : "<%= node[:rest2ldap][:ldap_host] %>",
-                    "port"     : <%= node[:rest2ldap][:ldap_port] %>
+                    "hostname" : "<%= node['rest2ldap']['ldap_host'] %>",
+                    "port"     : <%= node['rest2ldap']['ldap_port'] %>
                 }
             ],
             // The fail-over load-balancing pool (optional).
@@ -63,8 +63,8 @@
             // authentication is supported at the moment.
             "authentication" : {
                 "simple" : {
-                    "bindDN"       : "<%= node[:rest2ldap][:ldap_binddn] %>",
-                    "bindPassword" : "<%= node[:rest2ldap][:ldap_bindpw] %>"
+                    "bindDN"       : "<%= node['rest2ldap']['ldap_binddn'] %>",
+                    "bindPassword" : "<%= node['rest2ldap']['ldap_bindpw'] %>"
                 }
             }
         }
@@ -126,9 +126,9 @@
         // The search parameters to use for "search-simple" authentication. The
         // %s filter format parameters will be substituted with the
         // client-provided username, using LDAP filter string character escaping.
-        "searchBaseDN"         : "<%= node[:rest2ldap][:ldap_searchbase] %>",
-        "searchScope"          : "<%= node[:rest2ldap][:ldap_searchscope] %>", // "sub" Or "one".
-        "searchFilterTemplate" : "<%= node[:rest2ldap][:ldap_searchfilter] %>"
+        "searchBaseDN"         : "<%= node['rest2ldap']['ldap_searchbase'] %>",
+        "searchScope"          : "<%= node['rest2ldap']['ldap_searchscope'] %>", // "sub" Or "one".
+        "searchFilterTemplate" : "<%= node['rest2ldap']['ldap_searchfilter'] %>"
 
         // TODO: support for HTTP sessions?
     },
@@ -166,7 +166,7 @@
 
         // The REST APIs and their LDAP attribute mappings.
         "mappings" : {
-          <%= node[:rest2ldap][:mappings] %>
+          <%= node['rest2ldap']['mappings'] %>
         }
     }
 }

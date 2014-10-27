@@ -1,19 +1,19 @@
-default[:rest2ldap][:version] = '2.6.9'
+default['rest2ldap']['version'] = '2.6.9'
 url = 'http://maven.forgerock.org/repo/releases/org/forgerock/opendj'\
-'/opendj-rest2ldap-servlet/' + node[:rest2ldap][:version] + '/'\
-'opendj-rest2ldap-servlet-' + node[:rest2ldap][:version] + '-'\
+'/opendj-rest2ldap-servlet/' + node['rest2ldap']['version'] + '/'\
+'opendj-rest2ldap-servlet-' + node['rest2ldap']['version'] + '-'\
 'servlet.war'
-default[:rest2ldap][:url] = url
+default['rest2ldap']['url'] = url
 
-default[:rest2ldap][:ldap_host] = 'ldap.example.com'
-default[:rest2ldap][:ldap_port] = 389
-default[:rest2ldap][:ldap_binddn] = 'cn=Directory Manager'
-default[:rest2ldap][:ldap_bindpw] = ''
-default[:rest2ldap][:ldap_searchbase] = 'ou=people,dc=example,dc=com'
-default[:rest2ldap][:ldap_searchscope] = 'sub' # sub OR one
-default[:rest2ldap][:ldap_searchfilter] = '(&(objectClass=person)(uid=%s))'
+default['rest2ldap']['ldap_host'] = 'ldap.example.com'
+default['rest2ldap']['ldap_port'] = 389
+default['rest2ldap']['ldap_binddn'] = 'cn=Directory Manager'
+default['rest2ldap']['ldap_bindpw'] = ''
+default['rest2ldap']['ldap_searchbase'] = 'ou=people,dc=example,dc=com'
+default['rest2ldap']['ldap_searchscope'] = 'sub' # sub OR one
+default['rest2ldap']['ldap_searchfilter'] = '(&(objectClass=person)(uid=%s))'
 
-mappings <<-EOS
+default['rest2ldap']['mappings'] = <<-EOS
 "/users" : {
   "baseDN"              : "ou=people,dc=example,dc=com",
   "readOnUpdatePolicy"  : "controls",
@@ -113,5 +113,3 @@ mappings <<-EOS
     }
 }
 EOS
-
-default[:rest2ldap][:mappings] = mappings
