@@ -13,7 +13,7 @@ remote_file node['tomcat']['webapp_dir'] + '/' + node['rest2ldap']['name'] + '.w
   notifies :restart, 'service[' + tomcat_svc + ']', :immediately
 end
 
-template node['tomcat']['webapp_dir'] + node['rest2ldap']['name'] + '/opendj-rest2ldap-servlet.json' do
+template node['tomcat']['webapp_dir'] + '/' + node['rest2ldap']['name'] + '/opendj-rest2ldap-servlet.json' do
   owner node['tomcat']['user']
   group node['tomcat']['group']
   mode '0640'
