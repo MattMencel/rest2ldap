@@ -54,6 +54,13 @@ Installs and configures Rest2Ldap LDAP Gateway.
 
 Set the attributes to work in your environment.
 
+## Known Issues
+
+Can't seem to be able to specify more than one '%s' in the search filter.  So
+advanced filters like this don't currently work.
+
+(|(&(objectclass=person)(uid=%s))(&(objectClass=account)(cn=%s)))
+
 ## License and Authors
 
 - Author:: Matt Mencel (<mr-mencel@wiu.edu>)
