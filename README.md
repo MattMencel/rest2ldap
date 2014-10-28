@@ -25,6 +25,7 @@ All tunable attributes are in the `rest2ldap` hierarchy.
 
 Key | Type | Description | Default
 :---|:---|:---|:---
+`name` | String | Name of the WAR file the cookbook will generate | rest2ldap
 `version` | String | Rest2Ldap version to download | 2.6.9
 `url` | String | Download URL | Calculated
 `ldap_host` | String | LDAP Host | 'ldap.example.com'

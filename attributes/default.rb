@@ -1,3 +1,4 @@
+default['rest2ldap']['name'] = 'rest2ldap'
 default['rest2ldap']['version'] = '2.6.9'
 url = 'http://maven.forgerock.org/repo/releases/org/forgerock/opendj'\
 '/opendj-rest2ldap-servlet/' + node['rest2ldap']['version'] + '/'\
