@@ -1,3 +1,3 @@
-v0.1.4 (2014-10-28)
+v0.1.5 (2014-10-28)
 -------------------
-- Initial version
+- Initial working version
