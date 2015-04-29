@@ -8,4 +8,4 @@ version '0.1.9'
 
 supports 'ubuntu'
 
-depends 'tomcat', '~> 0.16.2'
+depends 'tomcat', '~> 0.16.0'
