@@ -17,7 +17,7 @@ template node['tomcat']['webapp_dir'] + '/' + node['rest2ldap']['name'] + '/open
   owner node['tomcat']['user']
   group node['tomcat']['group']
   mode '0640'
-  notifies :restart, 'service[' + tomcat_svc + ']'
+  notifies :restart, 'service[' + tomcat_svc + ']', :delayed
 end
 
 service tomcat_svc do
